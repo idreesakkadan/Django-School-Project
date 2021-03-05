@@ -1,0 +1,21 @@
+
+.abt {
+    /* background-color: rgb(165 196 210); */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Black w/opacity/see-through */
+    height: 350px;
+    border-radius: 14px;
+    color: white;
+    /* font-weight: bold; */
+    border: 3px solid #0c0c0c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 60%;
+    padding: 40px;
+    text-align: center;
+    }

@@ -1,0 +1,89 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block head_css %}
+    <link rel="stylesheet" href="{% static 'css/studentpage.css' %}" type="text/css">
+{% endblock head_css %}
+
+{% block content %}
+
+<div class="abt">
+    <h2>Student Form</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table table-borderless">
+            <div class="form-group row">
+                <tr>
+                    <td>
+                        <label for="inputName" class="col-sm-3 col-form-label text-light">Name</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="" placeholder="Name" name="name">
+                          </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputClass" class="col-sm col-form-label text-light">Class</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="" placeholder="Class" name="class">
+                          </div>
+                    </td>
+
+                </tr>
+                
+                
+                <tr>
+                    <td>
+                        <label for="inputAdno" class="col-sm-3 col-form-label text-light">Admission No</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="" placeholder="Ad No" name="adno">
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="inputPlace" class="col-sm-3 col-form-label text-light">Place</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="" placeholder="Place" name="place">
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputPhone" class="col-sm-3 col-form-label text-light">Phone</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="" placeholder="Phone" name="phone">
+                          </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <button type="submit" class="btn btn-primary">Submit</button></td>
+                </tr>
+              </div>
+            </form>
+
+        </table>
+    
+
+    </div>
+</div>
+
+
+
+{% endblock content %}

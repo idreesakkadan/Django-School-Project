@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block head_css %}
+    <link rel="stylesheet" href="{% static 'css/teacherpage.css' %}" type="text/css">
+{% endblock head_css %}
+
+{% block content %}
+
+<div class="abt">
+    <h2>Teacher Form</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table table-borderless">
+            <div class="form-group row">
+                <tr>
+                    <td>
+                        <label for="inputName" class="col-sm-3 col-form-label text-light">Name</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="" placeholder="Name" name="name">
+                          </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputDepartment" class="col-sm col-form-label text-light">Department</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="" placeholder="Department" name="dept">
+                          </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputEmail" class="col-sm-3 col-form-label text-light">Email</label>
+                    </td>
+                    <td>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="" placeholder="Email" name="email">
+                          </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <button type="submit" class="btn btn-primary">Submit</button></td>
+                </tr>
+              </div>
+            </form>
+
+        </table>
+    
+
+    </div>
+</div>
+
+
+
+{% endblock content %}
