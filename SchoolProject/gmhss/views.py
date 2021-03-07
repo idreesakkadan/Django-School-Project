@@ -34,6 +34,7 @@ def student(request):
         addstd = Student.objects.create(name=name,class_std=classstd,ad_no=adno,place=place,phone=phone)
         return redirect(viewstudents)
         
+        
 def teacher(request):
     if request.method == 'GET':
         return render(request,'teacherform.html')
