@@ -12,6 +12,9 @@ urlpatterns = [
     path('studentadd/',views.student,name='studenformpage'),
     path('teacheradd',views.teacher,name='teacherformpage'),
     path('register/',views.createuser,name='registerpage'),
-    path('logout/',views.logoutusr,name='logoutpage')
+    path('logout/',views.logoutusr,name='logoutpage'),
+    path('email/',views.emailsend,name='emailpage'),
+    path('viewstd',views.viewstudents,name='viewstdpage'),
+    path('leaveapplication',views.leaveform,name='leaveapplicationpage')
 
 ]

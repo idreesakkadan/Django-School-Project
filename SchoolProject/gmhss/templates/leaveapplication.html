@@ -8,30 +8,30 @@
 
 {% block content %}
 
-<div class="abt">
-    <h2>Student Form</h2>
+<div class="abt" style=height:510px>
+    <h2>Leave Application Form</h2>
     <form method="POST">
         {% csrf_token %}
-        <table class="table table-borderless">
+        <table class="table table-borderless" cellpadding='20px'>
             <div class="form-group row">
                 <tr>
                     <td>
-                        <label for="inputName" class="col-sm-3 col-form-label text-light">Name</label>
+                        <label for="" class="col-sm col-form-label text-light">To Address</label>
                     </td>
                     <td>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" id="" placeholder="Name" name="name">
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="" placeholder="To Address" name="toad">
                           </div>
                     </td>
 
                 </tr>
                 <tr>
                     <td>
-                        <label for="inputClass" class="col-sm col-form-label text-light">Class</label>
+                        <label for="" class="col-sm col-form-label text-light">Date of Leave</label>
                     </td>
                     <td>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" id="" placeholder="Class" name="class">
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="" placeholder="Date of Leave" name="date">
                           </div>
                     </td>
 
@@ -40,11 +40,14 @@
                 
                 <tr>
                     <td>
-                        <label for="inputAdno" class="col-sm-3 col-form-label text-light">Admission No</label>
+                        <label for="" class="col-sm col-form-label text-light">Reason of Leave</label>
                     </td>
                     <td>
-                        <div class="col-sm-4">
-                            <input type="number" class="form-control" id="" placeholder="Ad No" name="adno">
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="" placeholder="Reason of Leave" name="reason" id="" cols="30" rows="3">
+
+                            </textarea>
+        
                         </div>
                     </td>
 
@@ -52,22 +55,22 @@
 
                 <tr>
                     <td>
-                        <label for="inputPlace" class="col-sm-3 col-form-label text-light">Place</label>
+                        <label for="" class="col-sm col-form-label text-light">Student Name</label>
                     </td>
                     <td>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" id="" placeholder="Place" name="place">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" placeholder="Student Name" name="name">
                         </div>
                     </td>
 
                 </tr>
                 <tr>
                     <td>
-                        <label for="inputPhone" class="col-sm-3 col-form-label text-light">Phone</label>
+                        <label for="" class=" col-form-label text-light">Department</label>
                     </td>
                     <td>
-                        <div class="col-sm-4">
-                            <input type="number" class="form-control" id="" placeholder="Phone" name="phone">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" placeholder="Department" name="dept">
                           </div>
                     </td>
                 </tr>
@@ -75,8 +78,6 @@
                     <td></td>
                     <td>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <a href="{% url 'viewstdpage' %}" class="btn btn-primary">View Students</a>
-
                     </td>
                 </tr>
               </div>

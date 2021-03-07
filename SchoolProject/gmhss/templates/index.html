@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     {% block head_css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+
     {% endblock %}
-    <title>GMHSS</title>
-
+  
     <style>
-
         body{
             height: 100%;
             width: 100%;
@@ -22,11 +22,10 @@
             background-repeat: no-repeat;
 
         }
-
-    </style>
+      </style>
+    <title>GMHSS</title>
 </head>
 <body>
-  {% if request.session.usertype == 'admin' %}
   {% csrf_token %}
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -58,6 +57,9 @@
                         <li class="divider"></li>
                         </ul>   
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="{% url 'leaveapplicationpage' %}">Leave Application</a>
+                    </li>
                     <ul class="nav navbar-nav navbar-right">
                       <li class="nav-item" style="  float: right !important;">
                         {% if request.user.is_authenticated %} 
@@ -75,35 +77,14 @@
     </header>
     
       {% block content %}
-      
-      <style>
-           .abt {
-        /* background-color: rgb(165 196 210); */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.6);
-        /* Black w/opacity/see-through */
-        height: 150px;
-        border-radius: 14px;
-        color: white;
-        /* font-weight: bold; */
-        border: 3px solid #0c0c0c;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        width: 60%;
-        padding: 40px;
-        text-align: center;
-        }
-      </style>
+            
     <div class="abt" style="top: 50;">
         <h3>WELCOME TO </h3>
         <h2>GOVT MODEL HIGHER SECONDARY SCHOOL</h2>
     </div>
       {% endblock content %}
-    {% endif %}
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

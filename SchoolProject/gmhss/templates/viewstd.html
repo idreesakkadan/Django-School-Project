@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block head_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+{% endblock head_css %}
+
+{% block content %}
+
+<div class="abt">
+    <div class="row">
+        <h2 class="col-md-12">View Student</h2>
+    <table class="table table-info">
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Ad No</th>
+            <th>Place</th>
+            <th>Phone</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.class_std }}</td>
+            <td>{{ i.ad_no }}</td>
+            <td>{{ i.place }}</td>
+            <td>{{ i.phone }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    
+    </div>
+    
+</div>
+
+
+
+{% endblock content %}
