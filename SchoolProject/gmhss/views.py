@@ -32,7 +32,7 @@ def student(request):
         phone=request.POST.get('phone')
 
         addstd = Student.objects.create(name=name,class_std=classstd,ad_no=adno,place=place,phone=phone)
-        return redirect(careers)
+        return redirect(viewstudents)
         
 def teacher(request):
     if request.method == 'GET':
